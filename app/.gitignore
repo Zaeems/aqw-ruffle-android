@@ -1,0 +1,10 @@
+/src/main/jniLibs
+/build/intermediates
+/build/kotlin
+/build/kotlinTooling
+/build/kotlinToolingMetadata
+/build/tmp
+/build/outputs/logs
+/build/outputs/apk/debug
+/build/outputs/apk/release/baselineProfiles
+/build/outputs/apk/release/output-metadata.json
