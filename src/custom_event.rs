@@ -11,7 +11,7 @@ pub enum RuffleEvent {
         down: bool,
         key_descriptor: KeyDescriptor,
     },
-    TextInput { codepoint: char },
+    TextInput { codepoint: char }, // AQW
     RunContextMenuCallback(usize),
     ClearContextMenu,
     RequestContextMenu,

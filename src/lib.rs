@@ -283,7 +283,7 @@ async fn run(app: AndroidApp) {
                                 let url = JavaInterface::get_swf_uri(&mut env, &activity);
                                 let bytes = JavaInterface::get_swf_bytes(&mut env, &activity);
 
-                                // --- AQUASTAR MODIFICATION: Correct FlashVars ---
+                                // --- AQW FlashVars ---
                                 let mut parameters = Vec::new();
                                 parameters.push(("base".to_string(), "https://game.aq.com/game/gamefiles/".to_string()));
                                 parameters.push(("allowNetworking".to_string(), "all".to_string()));
@@ -715,22 +715,18 @@ pub unsafe extern "C" fn Java_rs_ruffle_PlayerActivity_nativeOnBackspace(
     mut env: JNIEnv,
     this: JObject,
 ) {
-    // Import the types we now know are correct
     use ruffle_core::events::{
         KeyDescriptor, KeyLocation, LogicalKey, NamedKey, PhysicalKey
     };
 
     let event_loop: MutexGuard<Sender<RuffleEvent>> = env.get_rust_field(this, "eventLoopHandle").unwrap();
 
-    // Create the KeyDescriptor using the correct enums
     let key_descriptor = KeyDescriptor {
-        // PhysicalKey does not use KeyCode anymore
         physical_key: PhysicalKey::Backspace,
         key_location: KeyLocation::Standard,
         logical_key: LogicalKey::Named(NamedKey::Backspace),
     };
 
-    // Simulate a full key press: down, then up
     let _ = event_loop.send(RuffleEvent::VirtualKeyEvent {
         down: true,
         key_descriptor,
