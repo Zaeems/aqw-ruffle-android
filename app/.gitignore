@@ -2,9 +2,9 @@
 /build/intermediates
 /build/kotlin
 /build/kotlinTooling
-/build/kotlinToolingMetadata
-/build/tmp
-/build/outputs/logs
 /build/outputs/apk/debug
+/build/kotlinToolingMetadata
 /build/outputs/apk/release/baselineProfiles
+/build/outputs/logs
+/build/tmp
 /build/outputs/apk/release/output-metadata.json

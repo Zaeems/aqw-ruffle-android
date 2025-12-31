@@ -9,6 +9,6 @@
 local.properties
 /target
 *.jks
-./gradle.properties
+gradle.properties
 *.jks
 /build
