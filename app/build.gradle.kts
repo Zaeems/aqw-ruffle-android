@@ -123,7 +123,7 @@ androidComponents {
 }
 
 dependencies {
-    implementation("org.java-websocket:Java-WebSocket:1.5.3")
+    implementation("org.java-websocket:Java-WebSocket:1.6.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
